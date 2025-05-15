@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0.42
+    container_name: zona_fit
+    ports:
+      - "${MYSQL_PORT}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      # - mysql_data:/var/lib/mysql # persistencia de las bd
+      - ./db:/db # Mapear carpeta db con el contenedor
+      - ./db/zona_fit_db.sql:/docker-entrypoint-initdb.d/zona_fit_db.sql
+
+# volumes:
+#   mysql_data:
+
+
+networks:
+  default:
+    driver: bridge
