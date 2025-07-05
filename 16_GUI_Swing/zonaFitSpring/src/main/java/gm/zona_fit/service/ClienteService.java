@@ -16,7 +16,6 @@ public class ClienteService implements IClienteService {
     @Override
     public List<Cliente> listatClientes() {
         List<Cliente> clientes = clienteRepository.findAll();
-
         return clientes;
     }
 
@@ -33,7 +32,6 @@ public class ClienteService implements IClienteService {
     @Override
     public Cliente buscarClienteId(Integer idCliente) {
         Cliente cliente = clienteRepository.findById(idCliente).orElse(null);
-
         return cliente;
     }
 }
