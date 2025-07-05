@@ -1,0 +1,11 @@
+# Directorios
+**/target/
+**/test/
+**/.vscode/
+**/.idea/
+Material/
+
+# Archivos
+**/*.class
+**/*.zip
+
