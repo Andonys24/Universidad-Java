@@ -16,6 +16,7 @@
         </constraints>
         <properties>
           <font name="Arial" size="36" style="1"/>
+          <foreground color="-8552961"/>
           <text value="Zona Fit (GYM)"/>
         </properties>
       </component>
